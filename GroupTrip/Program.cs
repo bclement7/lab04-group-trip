@@ -57,9 +57,20 @@ double tripTotal = fuel + totalPizzaCost;
 System.Console.WriteLine("Fuel Cost: " + fuel.ToString("C"));
 System.Console.WriteLine("Pizza Cost: " + totalPizzaCost.ToString("C"));
 Console.WriteLine("Trip Total: " + tripTotal.ToString("C"));
+System.Console.WriteLine();
 
 // ===Part 2: The Group===
+//Establishes the arrays of people and their hours worked and rates
+string[] names = { "Ada", "Grace", "Alan", "Katerine" };
+double[] hoursWorked = { 22, 15, 30, 18 };
+double[] hourlyRates = { 13.50, 16.00, 11.20, 14.80 };
 
+double slicesEach = pizzasNeeded * slicesPerPizza / names.Length;
+double costPerPerson = tripTotal / names.Length;
+
+System.Console.WriteLine("People Going: " + names.Length);
+System.Console.WriteLine("Slices each: " + slicesEach.ToString("F1"));
+System.Console.WriteLine("Cost Per Person: " + costPerPerson.ToString("C"));
 /*
 int totalSlices = pizzasNeeded * slicesPerPizza;
 
